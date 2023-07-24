@@ -2,16 +2,17 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Book book1 = new Book();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        book1.setTitle("The Great Gatsby");
+        book1.setAuthor("F. Scott Fitzgerald");
+        book1.setGenre("Fiction");
+        book1.setIsbn("9780743273565");
+        book1.setAvailable(true);
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee", "Fiction", "9780061120084", false);
+
+        System.out.println("Book 1: " + book1.getTitle() + " by " + book1.getAuthor());
+        System.out.println("Book 2: " + book2.getTitle() + " by " + book2.getAuthor());
     }
 }
